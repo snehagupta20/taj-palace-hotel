@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sanskiriti</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://kit.fontawesome.com/57bab7e65a.js" crossorigin="anonymous"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+<body>
+
+    <header clas="header" id="nav-menue">
+        <div class="container">
+            <nav>
+                <a href="#" >
+                    <img class="logo" src="photos/image_2023-07-14_163409971-removebg-preview.png" alt="logo">
+                </a>
+
+                <ul class="navmenu">
+                    <li> <a href="#home" class="nav-link">Home</a> </li>
+                    <li> <a href="#home" class="nav-link">About</a> </li>
+                    <li> <a href="#home" class="nav-link">Roooms</a> </li>
+                    <li> <a href="#home" class="nav-link">Restraunt</a> </li>
+                    <li> <a href="#home" class="nav-link">Gallery</a> </li>
+                    <li> <a href="#home" class="nav-link">Contact</a> </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <script>
+        const hamburger=document.querySelector('.hamburger');
+        const nav=document.querySelector('.navmenu');
+
+        hamburger.addEventListener("click", mobilemenu);
+
+        function mobilemenu(){
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+
+        const navlink=document.querySelectorAll('.nav-link');
+        navlink.forEach((n)=>n.addEventListener("click", closeMenu));
+
+        function closeMenu(){
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+        }
+
+        
+        
+
+    </script>
+
+
+
+    <section class="home" id="home">
+        <!-- <img class="sideborder1" src="photos/side border.jpg">
+        <img class="sideborder2" src="photos/side border.jpg"> -->
+        <div class="head_container">
+            <div class="box">
+                <div class="text">
+                    <!-- <h1>hello.salut.hola</h1> -->
+                    <img src="photos/taj lake palace text-2.png">
+                    <p>Jag Niwas, constructed between 1743-1746 by Maharana Jagat Singh II, the 62nd custodian of House of Mewar, was used as a summer retreat by the Mewar Royal family over years until Maharana Bhagwat Singh converted it into a heritage hotel. A jewel floating in the middle of Lake Pichola, Taj Lake Palace is a building made of marble locally sourced from Rajnagar, brought in by bullock carts travelling 66 kms to Udaipur. </p>
+                    <button>MORE INFO</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="photos/taj hotel exterior.avif" alt="" class="slide">
+            </div>
+            <div class="image-item">
+                <img src="photos/taj hotel exterior.avif" alt="" class="slide active" onclick="img('photos/taj hotel exterior.avif')">
+                <img src="photos/hotel royal suite.webp" alt="" class="slide " onclick="img('photos/hotel royal suite.webp')">
+                <img src="photos/taj hotel bathing.webp" alt="" class="slide " onclick="img('photos/taj hotel bathing.webp')">
+                <!-- <img src="photos/taj hotel dining.jpg" alt="" class="slide " onclick="img('photos/taj hotel dining.jpg')"> -->
+                <img src="photos/taj hotel dining area 2.jpeg" alt="" class="slide " onclick="img('photos/taj hotel dining area 2.jpeg')">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+
+        function img(anything){
+            document.querySelector('.slide').src=anything;
+        }
+
+        function change(change){
+            const line=document.querySelector('.image');
+            line.style.background= change;
+        }
+
+    </script>
+
+    <section class="book">
+        <div class="container flex" >
+            <div class="input grid" >
+                <div class="box">
+                    <label>Check-in:</label>
+                    <input type="date" placeholder="check-in-date">
+                </div>
+                <div class="box">
+                    <label>Check-out:</1abe1>
+                    <input type="date" placeholder="check-out-date">
+                </div>
+                <div class="box">
+                    <label>Adu1ts:</1abe1> <br>
+                    <input type="number" placeholder="0">
+                </div>
+                <div class="box">
+                    <label>Chi1dren:</1abe1> <br>
+                    <input type="number" placeholder="0">
+                </div>
+            </div>
+            <div class="search">
+                <input type="submit" value="SEARCH">
+            </div>
+        </div>
+    </section>
+
+    <section class="about top" id="about">
+        <div class="container flex">
+            <div class="left">
+                <div class="img">
+                    <img src="photos/taj palace drone view.jpeg" alt="" class="image1">
+                    <img src="photos/taj lake palce dome shikara view.jpeg" alt="" class="image2">
+                </div>
+            </div>
+            <div class="right">
+                <div class="heading">
+                    <h5> GRAND PALACE HOTEL IN UDAIPUR</h5>
+                    <h2>welcome to <span> TAJ PALACE HOTEL</span></h2>
+                    <!-- <img class="abouttajlake" src="photos/taj lake palace text-2.png"> -->
+                    <p> <span> TAJ PALACE's </span> location on an island in the midst of a lake affords every room breathtaking views of the neighbouring City Palace, Aravalli Hills, Machla Magra Hills and Jag Mandir. The incomparable location provides the perfect backdrop for the exquisite cuisines at the elegant restaurants of taj lake palace open only to resident guests.</p>
+                    <p> Signature speciality restaurants at this palace serve a choice of cuisines. Neel Kamal for authentic Rajasthani and other dishes from India; and the seasonally open-air Bhairo for contemporary European delicacies.</p>
+                    <button class="btn1">READ MORE</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper top">
+        <div class="container">
+            <div class="text">
+                <h2>OUR AMENITIES</h2>
+                <p>The Palace is a Resident only facility and all services and facilities are solely for our in house guests. The resident only policy is in place to ensure a tranquil experience for our guests.</p>
+
+                <div class="content">
+                    <div class="box flex" >
+                        <i class="fas fa-swimming-pool"></i>
+                        <span> swimming pool</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-dumbbell"></i>
+                        <span> gym & yoga</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-spa"></i>
+                        <span> spa & massage</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-ship"></i>
+                        <span> Boat tours</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-swimmer"></i>
+                        <span> Surfing lessons</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-water"></i>
+                        <span> diving & smorking</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-microphone"></i>
+                        <span> conference room</span>
+                    </div>
+                    <div class="box flex" >
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span> private beach</span>
+                    </div>
+
+
+                    <!-- <i class="fas fa-swimming-pool"></i>
+                    <i class="fas fa-dumbbell"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-ship"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-microphone"></i>
+                    <i class="fas fa-water"></i>
+                    <i class="fas fa-umbrella-beach"></i> -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section class=" room top" id=" room" >
+        <div class="container">
+            <div class="heading_top flexl">
+                <div class="heading">
+                    <h5>RAISING COMFORT TO THE HIGHEST</h5>
+                    <h2>Rooms $ Suites</h2>
+                </div>
+                <div class="button">
+                    <button >VIEW ALL</button>
+                </div>
+            </div>
+
+            <div class="content grid" >
+                <div class="box">
+                    <div class="img">
+                        <img src="image/rl.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Superior Sobie Rooms</h3>
+                        <p> <span>$</span>129 <span>/per night</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="rooms">
+        <div id="text">
+            <div class="plainline"></div>
+            <h5> RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+            <h1> ROOMS $ SUITES</h1>
+        </div>
+
+        <div class="roompics">
+            <div class="img1 roomimg">
+                <img src="photos/taj hotel room1.jpeg">
+                <div class="textimg text1">
+                    <h3 class="description">PALACE VIEW ROOM</h3>
+                    <h5 class="price">1,00,000 Rs.</h5>
+                </div>
+            </div>
+            
+
+            <div class="img2 roomimg">
+                <img src="photos/taj hotel room2.jpeg">
+                <div class="textimg text2">
+                    <h3 class="description">LAKE VIEW ROOM</h3>
+                    <h5 class="price">2,00,000 Rs.</h5>
+                </div>
+            </div>
+            
+
+            <div class="img3 roomimg">
+                <img src="photos/taj  hotel room 4.jpeg">
+                <div class="textimg text3">
+                    <h3 class="description">MAHARAJA SUITE</h3>
+                    <h5 class="price">30,00,000 Rs.</h5>
+                </div>
+            </div>
+            
+
+            <div class="img4 roomimg">
+                <img src="photos/taj hotel room 5.jpeg">
+                <div class="textimg text4">
+                    <h3 class="description">ROYAL LAKE VIEW ROOM</h3>
+                    <h5 class="price">3,00,000 Rs.</h5>
+                </div>
+            </div>
+            
+
+            <div class="img5 roomimg">
+                <img src="photos/taj hotel room 6.jpeg">
+                <div class="textimg text5">
+                    <h3 class="description">MAHARANI SUITE</h3>
+                    <h5 class="price">1,00,00,000 Rs.</h5>
+                </div>
+            </div>
+            
+
+            <div class="img6 roomimg">
+                <img src="photos/taj hotel room 3.jpeg">
+                <div class="textimg text6">
+                    <h3 class="description">LAKE VIEW ROOM</h3>
+                    <h5 class="price">2,00,000 Rs.</h5>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </section>
+
+
+
+    <section class="review">
+        <div class="image">
+            <img src="photos/review section 3.jpg">
+        </div>
+        <div class=" text reviews">
+            <h5 class="description">AT THE HEART OF COMMUNICATION</h5>
+            <h1>People say</h1>
+            <p class="actualreview"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam consequuntur temporibus molestiae laudantium magnam, vero eveniet perspiciatis minima quisquam nulla fugit quidem fuga! Quisquam asperiores inventore est voluptas, debitis minima tempore esse quae consequuntur quam.</p>
+            <div class="person">
+                <img class="personimg" src="photos/sneha potrait 2.jpg" alt="">
+                <h3 class="name">SNEHA GUPTA</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="map top">
+        <iframe src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_API_KEY&callback=initMap&v=weekly" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+
+
+      <section class="footer">
+        <footer>
+            <!-- <div class="container">
+                <footer class="py-5">
+                  <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5>Section</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5>Section</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5>Section</h5>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-md-5 offset-md-1 mb-3">
+                      <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                          <label for="newsletter1" class="visually-hidden">Email address</label>
+                          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                          <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+              
+                  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2023 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                      <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                    </ul>
+                  </div>
+                </footer>
+              </div> -->
+
+
+              <div class="container flex footer-container">
+                <a href="#" class="company-logo">
+                    <img src="./assets/asset 1.png" alt="">
+                </a>
+                <div class="link-column flex">
+                    <h4>Product</h4>
+                    <a href="#" class="hover-links">Overview</a>
+                    <a href="#" class="hover-links">Pricing</a>
+                    <a href="#" class="hover-links">accessibility</a>
+                    <a href="#" class="hover-links">languages</a>
+                    <a href="#" class="hover-links">privacy policy</a>
+                    <a href="#" class="hover-links">Sign up</a>
+                    <a href="#" class="hover-links">book a room</a>
+                </div>
+                <div class="link-column flex">
+                    <h4>Methodologies</h4>
+                    <a href="#" class="hover-links">blog</a>
+                    <a href="#" class="hover-links">Prototype testing</a>
+                    <a href="#" class="hover-links">site map</a>
+                    <a href="#" class="hover-links">Preference tests</a>
+                    <a href="#" class="hover-links">terms of use</a>
+                    <a href="#" class="hover-links">contact us</a>
+                </div>
+                <div class="link-column flex">
+                    <h4>Resources</h4>
+                    <a href="#" class="hover-links">Blog</a>
+                    <a href="#" class="hover-links">Examples</a>
+                    <a href="#" class="hover-links">Testing guides</a>
+                    <a href="#" class="hover-links">Research panel calculator</a>
+                    <a href="#" class="hover-links">Help Center</a>
+                    <a href="#" class="hover-links">Contact</a>
+                    <a href="#" class="hover-links">NIDHI</a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="subfooter">
+            <div class="container flex subfooter-container">
+                <a href="#" class="hover-links">Privacy Policy</a>
+                <a href="#" class="hover-links">Terms & Condition</a>
+                <a href="#" class="hover-links">Security Information</a>
+                <a href="#" class="hover-links"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover-links"><i class="fa-brands fa-twitter"></i> </a>
+                <a href="#" class="hover-links"> <i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover-links"> <i class="fa-brands fa-youtube"></i></a>
+                
+    
+            </div>
+        </div>
+    
+      </section>
+</body>
+</html>
