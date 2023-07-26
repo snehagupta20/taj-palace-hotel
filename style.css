@@ -658,7 +658,7 @@ input {
     height: 600px;
     background-color:#C3B1E1 ;
     position: absolute;
-    top: 465%;
+    top: 486%;
     left: 12%;
     padding: 4%;
 }
@@ -706,7 +706,7 @@ input {
 }
 
 .footer{
-    margin-top: 10%;
+    margin-top: 60%;
 }
 
 footer{
